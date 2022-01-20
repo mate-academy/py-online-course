@@ -15,7 +15,7 @@ class OnlineCourse:
     @classmethod
     def from_dict(cls, course_dict):
         arr = []
-        for key, value in course_dict.items():
+        for value in course_dict.values():
 
             if course_dict.get('name'):
                 arr.append(value)
