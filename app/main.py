@@ -14,16 +14,8 @@ class OnlineCourse:
 
     @classmethod
     def from_dict(cls, course_dict):
-        arr = []
-        for value in course_dict.values():
-
-            if course_dict.get('name'):
-                arr.append(value)
-
-            elif course_dict.get('description'):
-                arr.append(value)
-
-            elif course_dict.get('days'):
-                arr.append(value)
-
-        return cls(arr[0], arr[1], cls.days_to_weeks(arr[2]))
+        return cls(
+            course_dict["name"],
+            course_dict["description"],
+            OnlineCourse.days_to_weeks(course_dict["days"])
+        )
