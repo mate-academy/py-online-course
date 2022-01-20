@@ -1,3 +1,6 @@
+import math
+
+
 class OnlineCourse:
 
     def __init__(self, name, description, weeks):
@@ -15,5 +18,4 @@ class OnlineCourse:
 
     @staticmethod
     def days_to_weeks(days):
-        import math
         return math.ceil(days / 7)
