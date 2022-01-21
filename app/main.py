@@ -1,3 +1,6 @@
+from math import ceil
+
+
 class OnlineCourse:
     DAYS_IN_WEEKS = 7
 
@@ -11,8 +14,7 @@ class OnlineCourse:
         if days < 0:
             return 0
         else:
-            return days // OnlineCourse.DAYS_IN_WEEKS \
-                + bool(days % OnlineCourse.DAYS_IN_WEEKS)
+            return int(ceil(days / OnlineCourse.DAYS_IN_WEEKS))
 
     @classmethod
     def from_dict(cls, dictionary):
