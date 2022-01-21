@@ -17,13 +17,13 @@ class OnlineCourse:
     @classmethod
     def from_dict(cls, dictionary):
         if 'days' in dictionary:
-            return OnlineCourse(
+            return cls(
                 dictionary['name'],
                 dictionary['description'],
                 cls.days_to_weeks(dictionary['days']),
             )
         elif 'weeks' in dictionary:
-            return OnlineCourse(
+            return cls(
                 dictionary['name'],
                 dictionary['description'],
                 dictionary['weeks'],
