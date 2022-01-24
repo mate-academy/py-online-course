@@ -12,11 +12,7 @@ class OnlineCourse:
 
     @classmethod
     def from_dict(cls, course_dict):
-        for key in course_dict:
-            if key == "name":
-                cls.name = course_dict["name"]
-            if key == "description":
-                cls.description = course_dict["description"]
-            if key == "days":
-                cls.weeks = cls.days_to_weeks(course_dict["days"])
-        return cls(cls.name, cls.description, cls.weeks)
+        return cls(
+            course_dict["name"],
+            course_dict["description"],
+            cls.days_to_weeks(course_dict["days"]))
