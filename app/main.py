@@ -2,7 +2,6 @@ from math import ceil
 
 
 class OnlineCourse:
-    # write your code here
     def __init__(self, name, description, weeks):
         self.name = name
         self.description = description
