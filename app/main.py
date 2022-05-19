@@ -12,8 +12,8 @@ class OnlineCourse:
         return ceil(day / 7)
 
     @classmethod
-    def from_dict(self, course_dict):
-        self.name = course_dict["name"]
-        self.description = course_dict["description"]
-        self.weeks = self.days_to_weeks(course_dict["days"])
-        return OnlineCourse(self.name, self.description, self.weeks)
+    def from_dict(cls, course_dict):
+        cls.name = course_dict["name"]
+        cls.description = course_dict["description"]
+        cls.weeks = cls.days_to_weeks(course_dict["days"])
+        return cls(cls.name, cls.description, cls.weeks)
