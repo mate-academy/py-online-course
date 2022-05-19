@@ -1,3 +1,6 @@
+import math
+
+
 class OnlineCourse:
     def __init__(self,
                  name: str,
@@ -10,12 +13,12 @@ class OnlineCourse:
 
     @staticmethod
     def days_to_weeks(days):
-        return days / 7 if days % 7 == 0 else days // 7 + 1
+        return math.ceil(days / 7)
 
     @classmethod
     def from_dict(cls, course_dict):
         return cls(
             course_dict["name"],
             course_dict["description"],
-            cls.days_to_weeks(course_dict["days"])
+            OnlineCourse.days_to_weeks(course_dict["days"])
         )
