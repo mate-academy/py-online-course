@@ -4,12 +4,14 @@ class OnlineCourse:
         self.description = description
         self.weeks = weeks
 
+    @staticmethod
+    def days_to_weeks(days):
+        return int(days / 7) + (days % 7 > 0)
 
-course = OnlineCourse(
-    name="Python Basics",
-    description="The best course to start learning Python",
-    weeks=2,
-)
-print(course.description)
-
-"Commit for myself. I will continue at work"
+    @classmethod
+    def from_dict(cls, course_dict):
+        return cls(
+            course_dict["name"],
+            course_dict["description"],
+            cls.days_to_weeks(course_dict["days"])
+        )
