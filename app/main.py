@@ -20,5 +20,5 @@ class OnlineCourse:
         Returning new instance of OnlineCourse with correct attributes
         using staticmethod days_to_weeks
         """
-        weeks = cls.days_to_weeks(course_dict["days"])
+        weeks = OnlineCourse.days_to_weeks(course_dict["days"])
         return cls(course_dict["name"], course_dict["description"], weeks)
