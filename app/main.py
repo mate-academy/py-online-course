@@ -14,8 +14,6 @@ class OnlineCourse:
     def days_to_weeks(days):
         if days % 7 == 0:
             return days / 7
-        elif days < 7:
-            return 1
         return (days // 7) + 1
 
     @classmethod
