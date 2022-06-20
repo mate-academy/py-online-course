@@ -9,7 +9,7 @@ class OnlineCourse:
         name = course_dict["name"]
         description = course_dict["description"]
         weeks = OnlineCourse.days_to_weeks(course_dict["days"])
-        return OnlineCourse(name, description, weeks)
+        return cls(name, description, weeks)
 
     @staticmethod
     def days_to_weeks(days):
