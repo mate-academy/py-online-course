@@ -17,5 +17,3 @@ class OnlineCourse:
         description = course_dict['description']
         weeks = OnlineCourse.days_to_weeks(course_dict['days'])
         return cls(name, description, weeks)
-
-    pass
