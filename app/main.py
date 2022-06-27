@@ -14,8 +14,8 @@ class OnlineCourse:
     def days_to_weeks(days):
         return math.ceil(days / 7)
 
-    @staticmethod
-    def from_dict(course_dict):
-        OnlineCourse.weeks = OnlineCourse.days_to_weeks(course_dict['days'])
-        return OnlineCourse(course_dict['name'],
-                            course_dict['description'], OnlineCourse.weeks)
+    @classmethod
+    def from_dict(cls, course_dict):
+        cls.weeks = OnlineCourse.days_to_weeks(course_dict['days'])
+        return cls(course_dict['name'],
+                   course_dict['description'], OnlineCourse.weeks)
