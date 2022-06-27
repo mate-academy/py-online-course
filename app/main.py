@@ -17,4 +17,5 @@ class OnlineCourse:
     @staticmethod
     def from_dict(course_dict):
         OnlineCourse.weeks = OnlineCourse.days_to_weeks(course_dict['days'])
-        return OnlineCourse(course_dict['name'], course_dict['description'], OnlineCourse.weeks)
+        return OnlineCourse(course_dict['name'],
+                            course_dict['description'], OnlineCourse.weeks)
