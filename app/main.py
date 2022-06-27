@@ -18,4 +18,4 @@ class OnlineCourse:
     def from_dict(cls, course_dict):
         cls.weeks = OnlineCourse.days_to_weeks(course_dict['days'])
         return cls(course_dict['name'],
-                   course_dict['description'], OnlineCourse.weeks)
+                   course_dict['description'], cls.weeks)
