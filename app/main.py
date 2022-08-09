@@ -6,7 +6,7 @@ class OnlineCourse:
 
     @staticmethod
     def days_to_weeks(days):
-        return days // 7 if days % 7 == 0 else days // 7 + 1
+        return days // 7 if days % 7 == 0 else (days // 7) + 1
 
     @classmethod
     def from_dict(cls, course_dict):
