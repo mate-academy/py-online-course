@@ -13,6 +13,8 @@ class OnlineCourse:
 
     @classmethod
     def from_dict(cls, course_dict):
-        weeks = OnlineCourse.days_to_weeks(course_dict['days'])
-        course = OnlineCourse(course_dict['name'], course_dict['description'], weeks)
+        print("check this ", course_dict['name'])
+        weeks = cls.days_to_weeks(course_dict['days'])
+        course = cls(course_dict['name'], course_dict['description'], weeks)
+        OnlineCourse.OnlineClass = course
         return course
