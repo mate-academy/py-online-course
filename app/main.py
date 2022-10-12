@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import math
+from math import ceil
 
 
 class OnlineCourse:
@@ -11,7 +11,7 @@ class OnlineCourse:
 
     @staticmethod
     def days_to_weeks(days: int) -> int:
-        return math.ceil(days / 7)
+        return ceil(days / 7)
 
     @classmethod
     def from_dict(cls, course_dict: dict) -> object:
