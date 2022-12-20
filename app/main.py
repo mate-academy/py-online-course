@@ -1,4 +1,6 @@
+from __future__ import annotations
 from math import ceil
+
 
 
 class OnlineCourse:
@@ -8,7 +10,7 @@ class OnlineCourse:
         self.weeks = weeks
 
     @classmethod
-    def from_dict(cls, course_dict):
+    def from_dict(cls, course_dict: dict) -> OnlineCourse:
         name = course_dict["name"]
         description = course_dict["description"]
         weeks = course_dict.get("weeks", cls.days_to_weeks(course_dict["days"]))
