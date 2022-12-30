@@ -14,7 +14,7 @@ class OnlineCourse:
             return 1
         full_weeks = days // 7
         check_next_week = days % 7
-        return full_weeks + 1 if 0 < check_next_week < days-1 else full_weeks
+        return full_weeks + 1 if 0 < check_next_week < days - 1 else full_weeks
 
     @classmethod
     def from_dict(cls, course_dict: dict) -> OnlineCourse:
