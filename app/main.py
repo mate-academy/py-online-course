@@ -7,7 +7,7 @@ class OnlineCourse:
             name: str,
             description: str,
             weeks: int
-    ):
+    ) -> None:
         self.name = name
         self.description = description
         self.weeks = weeks
