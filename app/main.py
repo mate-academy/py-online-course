@@ -1,3 +1,4 @@
+from __future__ import annotations
 import math
 
 
@@ -12,7 +13,7 @@ class OnlineCourse:
         return math.ceil(days / 7)
 
     @classmethod
-    def from_dict(cls, course_dict: dict) -> object:
+    def from_dict(cls, course_dict: dict) -> OnlineCourse:
         return (
             cls(
                 course_dict["name"],
