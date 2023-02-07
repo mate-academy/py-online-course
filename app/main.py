@@ -18,11 +18,9 @@ class OnlineCourse:
 
     @classmethod
     def from_dict(cls, course_dict: dict) -> OnlineCourse:
-        values = [*course_dict.values()]
-        new = object.__new__(cls)
-        new.name, new.description, new.weeks = (
-            values[0],
-            values[1],
-            cls.days_to_weeks(values[2]),
+        name, description, weeks = (
+            course_dict["name"],
+            course_dict["description"],
+            cls.days_to_weeks(course_dict["days"]),
         )
-        return new
+        return cls(name, description, weeks)
