@@ -1,17 +1,17 @@
 class OnlineCourse:
 
-    def __init__(self, name, description, weeks):
+    def __init__(self, name: str, description: str, weeks: int):
         self.name = name
         self.description = description
         self.weeks = weeks
 
-    @staticmethod 
-    def days_to_weeks(days:int) -> int:
+    @staticmethod
+    def days_to_weeks(days: int) -> int:
         # 1 week = 7 days
         if days % 7 > 0:
-            return days//7 + 1
+            return days // 7 + 1
         else:
-            return days//7
+            return days // 7
 
     @classmethod
     def from_dict(cls, course_dict: dict) -> "OnlineCourse":
