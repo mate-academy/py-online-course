@@ -1,7 +1,7 @@
 class OnlineCourse:
 
     def __init__(self, name: str, description: str,
-                 weeks: int) -> "OnlineCourse": 
+                 weeks: int) -> "OnlineCourse":
         self.name = name
         self.description = description
         self.weeks = weeks
