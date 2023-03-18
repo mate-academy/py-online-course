@@ -9,7 +9,7 @@ class OnlineCourse:
         self.weeks = weeks
 
     @staticmethod
-    def days_to_weeks(days) -> int:
+    def days_to_weeks(days : int) -> int:
         """" 1 day = 0,142857143 week"""
         if days % 7 == 0:
             weeks = days // 7
