@@ -1,6 +1,6 @@
 class OnlineCourse:
     # write your code here
-    def __init__(self, name: str, description: str, weeks: int):
+    def __init__(self, name: str, description: str, weeks: int) -> None:
         self.name = name
         self.description = description
         self.weeks = weeks
@@ -14,7 +14,7 @@ class OnlineCourse:
         return weeks
 
     @classmethod
-    def from_dict(cls, course_dict: dict):
+    def from_dict(cls, course_dict: dict) -> None:
         course = cls(
             course_dict["name"],
             course_dict["description"],
@@ -37,7 +37,8 @@ if __name__ == "__main__":
 
     course_dict = {
         "name": "Python Core",
-        "description": "After this course you will know everything about Python",
+        "description": "After this course you will know everything"
+        "about Python",
         "days": 12,
     }
 
