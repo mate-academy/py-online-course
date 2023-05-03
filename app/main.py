@@ -14,8 +14,19 @@ class OnlineCourse:
 
     @classmethod
     def from_dict(cls, course_dict: dict) -> OnlineCourse:
-        return OnlineCourse(
+        return cls(
             course_dict["name"],
             course_dict["description"],
             cls.days_to_weeks(course_dict["days"])
         )
+
+
+course_dict = {
+    "name": "Python Core",
+    "description": "After this course you will know everything about Python",
+    "days": 12,
+}
+
+python_course = OnlineCourse.from_dict(course_dict)
+print(python_course)
+print(python_course.__dict__)
