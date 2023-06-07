@@ -1,4 +1,4 @@
-class OnlineClass:
+class OnlineCourse:
     course_dict = {}
 
     def __init__(self, name: str, description: str, weeks: int) -> None:
@@ -14,8 +14,8 @@ class OnlineClass:
         return week
 
     @classmethod
-    def from_dict(cls, course_dict: dict) -> "OnlineClass":
-        return OnlineClass(
+    def from_dict(cls, course_dict: dict) -> "OnlineCourse":
+        return OnlineCourse(
             name=course_dict["name"],
             description=course_dict["description"],
             weeks=cls.days_to_weeks(course_dict["days"])
