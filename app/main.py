@@ -17,4 +17,5 @@ class OnlineCourse:
 
     @staticmethod
     def days_to_weeks(days: int) -> int:
-        return days // 7 + (days % 7 > 0)
+        weeks = days // 7 + (days % 7 > 0)
+        return weeks
