@@ -10,7 +10,7 @@ class OnlineCourse:
 
     @classmethod
     def from_dict(cls, course_dict: dict) -> OnlineCourse:
-        return OnlineCourse(
+        return cls(
             name=course_dict["name"],
             description=course_dict["description"],
             weeks=cls.days_to_weeks(course_dict["days"]),
@@ -22,3 +22,14 @@ class OnlineCourse:
         if weeks % 1 != 0:
             weeks += 1
         return math.floor(weeks)
+
+
+dictionary = {
+    "days": 13,
+    "description": "The best course to start learning Python!",
+    "name": "Python Basics",
+}
+
+
+python_course = OnlineCourse.from_dict(dictionary)
+print(python_course.weeks)
