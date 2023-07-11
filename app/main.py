@@ -8,11 +8,9 @@ class OnlineCourse:
         self.name = name
         self.description = description
         self.weeks = weeks
-    
     @staticmethod
     def days_to_weeks(days: int) -> int:
         return round(days / 7)
-    
     @classmethod
     def dict_convert(cls, course_dict: dict) -> OnlineCourse:
         return cls(
