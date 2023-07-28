@@ -1,3 +1,21 @@
+import math
+
+
 class OnlineCourse:
-    # write your code here
-    pass
+    def __init__(self, name: str, description: str, weeks: int) -> None:
+        self.name = name    # Initialize class attributes
+        self. description = description
+        self.weeks = weeks
+
+    @staticmethod
+    def days_to_weeks(days: int) -> int:
+        count_weeks = math.ceil(days / 7)   # Static method to convert number of days to number of weeks
+        return count_weeks
+
+    @classmethod
+    def from_dict(cls, course_dict: dict):
+        return cls(                            # Use dictionary values to initialize class attributes
+            name=course_dict["name"],
+            description=course_dict["description"],
+            weeks=cls.days_to_weeks(course_dict["days"])
+        )
