@@ -1,6 +1,5 @@
 from __future__ import annotations
 from math import ceil
-from typing import Self
 
 
 class OnlineCourse:
@@ -19,7 +18,7 @@ class OnlineCourse:
         return ceil(days / 7)
 
     @classmethod
-    def from_dict(cls: type[Self], course_dict: dict) -> Self:
+    def from_dict(cls, course_dict: dict) -> OnlineCourse:
         return cls(
             course_dict.get("name"),
             course_dict.get("description"),
