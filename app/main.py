@@ -14,7 +14,7 @@ class OnlineCourse:
         return result
 
     @classmethod
-    def from_dict(cls, course_dict: dict):
+    def from_dict(cls, course_dict: dict) -> Callable:
         name = course_dict.get("name")
         description = course_dict.get("description")
         days = cls.days_to_weeks(course_dict.get("days"))
