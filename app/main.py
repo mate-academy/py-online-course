@@ -1,5 +1,4 @@
 import math
-from typing import Callable
 
 
 class OnlineCourse:
@@ -14,7 +13,7 @@ class OnlineCourse:
         return result
 
     @classmethod
-    def from_dict(cls, course_dict: dict) -> Callable:
+    def from_dict(cls, course_dict: dict):
         name = course_dict.get("name")
         description = course_dict.get("description")
         days = cls.days_to_weeks(course_dict.get("days"))
