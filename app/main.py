@@ -3,7 +3,14 @@ import math
 
 class OnlineCourse:
 
+<<<<<<< HEAD
     def __init__(self, name: str, description: str, weeks: int) -> None:
+=======
+    def __init__(self,
+                 name: str,
+                 description: str,
+                 weeks: int) -> None:
+>>>>>>> 216d539 (Solution)
         self.name = name
         self.description = description
         self.weeks = weeks
