@@ -5,7 +5,7 @@ class OnlineCourse:
         self.weeks = weeks
 
     @staticmethod
-    def days_to_weeks(self, days: int) -> int:
+    def days_to_weeks(days: int) -> int:
         return days // 7 + 1
 
     @classmethod
