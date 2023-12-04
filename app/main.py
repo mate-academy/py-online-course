@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+
 class OnlineCourse:
     def __init__(self, name: str, description: str, weeks: float) -> None:
         self.name = name
