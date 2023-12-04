@@ -9,7 +9,9 @@ class OnlineCourse:
 
     @staticmethod
     def days_to_weeks(days: int) -> float:
-        return days / 7
+        if days / 7 % 10 == round(days / 7):
+            return round(days / 7)
+        return round(days / 7) + 1
 
     @classmethod
     def from_dict(cls, course_dict: dict) -> OnlineCourse:
