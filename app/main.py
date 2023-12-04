@@ -1,4 +1,5 @@
 from __future__ import annotations
+import math
 
 
 class OnlineCourse:
@@ -9,9 +10,7 @@ class OnlineCourse:
 
     @staticmethod
     def days_to_weeks(days: int) -> float:
-        if days / 7 % 10 == round(days / 7):
-            return round(days / 7)
-        return round(days / 7) + 1
+        return math.ceil(days / 7)
 
     @classmethod
     def from_dict(cls, course_dict: dict) -> OnlineCourse:
