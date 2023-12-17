@@ -7,11 +7,11 @@ class OnlineCourse:
         self.name = name
         self.description = description
         self.weeks = weeks
-    
+
     @staticmethod
     def days_to_weeks(days: int) -> int:
         return ceil(days / 7)
-    
+
     @classmethod
     def from_dict(cls, course_dict: dict) -> OnlineCourse:
         return cls(
