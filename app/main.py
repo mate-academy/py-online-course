@@ -1,3 +1,8 @@
+from __future__ import annotations
+
+import math
+
+
 class OnlineCourse:
     def __init__(self, name: str, description: str, weeks: int) -> None:
         self.name = name
@@ -5,11 +10,11 @@ class OnlineCourse:
         self.weeks = weeks
 
     @staticmethod
-    def days_to_weeks(days):
+    def days_to_weeks(days: int) -> int:
         return (days + 6) // 7  # Ceiling division to handle the last week
 
     @classmethod
-    def from_dict(cls, course_dict):
+    def from_dict(cls, course_dict: dict) -> OnlineCourse:
         name = course_dict["name"]
         description = course_dict["description"]
         days = course_dict["days"]
