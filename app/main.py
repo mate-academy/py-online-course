@@ -15,7 +15,7 @@ class OnlineClass:
 
     @classmethod
     def from_dict(cls, course_dict: dict) -> OnlineClass:
-        course = OnlineClass("", "", 0)
+        course = cls("", "", 0)
         course.name = course_dict.get("name")
         course.description = course_dict.get("description")
         course.weeks = cls.days_to_weeks(course_dict.get("days"))
