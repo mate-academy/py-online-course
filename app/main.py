@@ -1,6 +1,6 @@
 class OnlineCourse:
 
-    def __init__(self, name, description, weeks) -> None:
+    def __init__(self, name: str, description: str, weeks: int) -> None:
         self.name = name
         self.description = description
         self.weeks = weeks
@@ -11,7 +11,7 @@ class OnlineCourse:
         return (days + 6) // 7
 
     @classmethod
-    def from_dict(cls, course_dict):
+    def from_dict(cls: "OnlineCourse", course_dict: dict):
         return cls(course_dict["name"],
                    course_dict["description"],
                    cls.days_to_weeks(course_dict["days"])
