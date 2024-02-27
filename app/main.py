@@ -10,6 +10,7 @@ class OnlineCourse:
         return (days + 6) // 7
 # Цей метод створює новий екземпляр класу
 # OnlineCourse з використанням інформації з словника course_dict
+
     @classmethod
     def from_dict(cls, course_dict: dict) -> callable:
         name = course_dict["name"]
