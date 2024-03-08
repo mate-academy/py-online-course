@@ -3,6 +3,7 @@ import math
 
 
 class OnlineCourse:
+    course_dict = {}
 
     def __init__(
             self, name: str,
