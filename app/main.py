@@ -4,9 +4,7 @@ from math import ceil
 
 class OnlineCourse:
     def __init__(
-            self,
-            name: str, description: str, weeks: int,
-            *args, **kwargs
+            self, name: str, description: str, weeks: int, *args, **kwargs
     ) -> None:
         self.name = name
         self.description = description
