@@ -1,5 +1,4 @@
 class OnlineCourse:
-
     def __init__(self, name: str, description: str, weeks: str) -> None:
         self.name = name
         self.description = description
