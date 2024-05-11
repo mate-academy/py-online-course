@@ -21,3 +21,4 @@ class OnlineCourse:
                      OnlineCourse.days_to_weeks(course_dict["days"]))
         return course
 
+
