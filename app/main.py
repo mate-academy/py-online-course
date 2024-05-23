@@ -18,5 +18,3 @@ class OnlineCourse:
             description=course_dict["description"],
             weeks=cls.days_to_weeks(course_dict["days"])
         )
-
-
