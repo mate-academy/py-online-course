@@ -9,7 +9,7 @@ class OnlineCourse:
         return (days + 6) // 7
 
     @classmethod
-    def from_dict(cls, course_dict: dict) -> 'OnlineCourse':
+    def from_dict(cls, course_dict: dict) -> "OnlineCourse":
         weeks = cls.days_to_weeks(course_dict["days"])
         return cls(
             name=course_dict["name"],
