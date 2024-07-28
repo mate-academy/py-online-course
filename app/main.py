@@ -5,12 +5,13 @@ class OnlineCourse:
         self.name = name
         self.description = description
         self.weeks = weeks
+
     @staticmethod
     def days_to_weeks(days: int) -> int:
         if days % 7 == 0:
             return int(days / 7)
         else:
-            return int(days / 7 +1)
+            return int(days / 7 + 1)
 
     @classmethod
     def from_dict(cls, course_dict: dict) -> OnlineCourse:
