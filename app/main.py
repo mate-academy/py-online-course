@@ -4,3 +4,7 @@ class OnlineCourse:
         self.name = name
         self.description = description
         self.weeks = weeks
+
+    @staticmethod
+    def days_to_weeks(days: int) -> int:
+        return (days + 6) // 7
