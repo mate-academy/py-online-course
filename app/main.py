@@ -19,3 +19,4 @@ class OnlineCourse:
             description=course_dict["description"],
             weeks=weeks
         )
+
