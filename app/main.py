@@ -1,18 +1,21 @@
+from typing import Dict
+
+
 class OnlineCourse:
-    def __init__(self, name: str, description: str, weeks: int):
+    def __init__(self, name: str, description: str, weeks: int) -> None:
         self.name = name
         self.description = description
         self.weeks = weeks
+
     @staticmethod
-    def days_to_weeks(days):
-        return (days + 6) // 7
+    def days_to_weeks(days: int) -> int:
+        return (days + 6) // 7  # Округлення днів до цілих тижнів
 
     @classmethod
-    def from_dict(cls, course_dict: dict):
+    def from_dict(cls, course_dict: Dict[str, str]) -> "OnlineCourse":
         weeks = cls.days_to_weeks(course_dict["days"])
         return cls(
             name=course_dict["name"],
             description=course_dict["description"],
             weeks=weeks
         )
-
