@@ -13,7 +13,7 @@ class OnlineCourse:
         return ceil(days / 7)
 
     @classmethod
-    def from_dict(cls, course_dict) -> OnlineCourse:
+    def from_dict(cls, course_dict: dict) -> OnlineCourse:
         return cls(
             course_dict["name"],
             course_dict["description"],
