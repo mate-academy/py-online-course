@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 
-class OnlineCourse:
+class OnlineClass:
     def __init__(
             self,
             name: str,
@@ -16,8 +16,8 @@ class OnlineCourse:
     def from_dict(
             cls,
             course_dict: dict
-    ) -> OnlineCourse:
-        return OnlineCourse(
+    ) -> OnlineClass:
+        return OnlineClass(
             course_dict.get("name"),
             course_dict.get("description"),
             cls.days_to_weeks(course_dict.get("days"))
