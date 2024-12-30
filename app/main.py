@@ -9,7 +9,7 @@ class OnlineCourse:
 
     @classmethod
     def from_dict(cls, course_dict: dict) -> OnlineCourse:
-        return OnlineCourse(course_dict["name"], course_dict["description"],
+        return cls(course_dict["name"], course_dict["description"],
                             cls.days_to_weeks(int(course_dict["days"])))
 
     @staticmethod
