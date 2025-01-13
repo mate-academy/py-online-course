@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import Self
+from typing import Any
 
 
 class OnlineCourse:
@@ -13,7 +13,7 @@ class OnlineCourse:
         return days // 7 + 1 if days % 7 != 0 else days // 7
 
     @classmethod
-    def from_dict(cls, course_dict: dict) -> Self:
+    def from_dict(cls, course_dict: dict) -> Any:
         return cls(
             name=course_dict["name"],
             description=course_dict["description"],
