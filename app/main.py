@@ -18,7 +18,8 @@ class OnlineCourse:
         name = course_dict.get("name")
         description = course_dict.get("description")
         days = course_dict.get("days")
-        return cls(name=name, description=description, weeks=cls.days_to_weeks(days))
+        return cls(name=name, description=description,
+                   weeks=cls.days_to_weeks(days))
 
 
 course = OnlineCourse(
