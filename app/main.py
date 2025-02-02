@@ -3,7 +3,8 @@ import math
 
 
 class OnlineCourse:
-    def days_to_weeks(days: int) -> int:
+    @classmethod
+    def days_to_weeks(cls, days: int) -> int:
         return math.ceil(days / 7.0)
     pass
 
@@ -12,7 +13,8 @@ class OnlineCourse:
         self.description = description
         self.weeks = weeks
 
-    def from_dict(course: dict) -> OnlineCourse:
+    @classmethod
+    def from_dict(cls, course: dict) -> cls:
         return OnlineCourse(course["name"],
                             course["description"],
-                            OnlineCourse.days_to_weeks(course["days"]))
+                            cls.days_to_weeks(course["days"]))
