@@ -3,8 +3,8 @@ import math
 
 
 class OnlineCourse:
-    @classmethod
-    def days_to_weeks(cls, days: int) -> int:
+    @staticmethod
+    def days_to_weeks(days: int) -> int:
         return math.ceil(days / 7.0)
     pass
 
