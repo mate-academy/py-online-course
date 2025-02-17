@@ -10,7 +10,7 @@ class OnlineCourse:
         return (days + 6) // 7
 
     @classmethod
-    def from_dict(cls, course_dict: dict) -> 'OnlineCourse':
+    def from_dict(cls, course_dict: dict) -> "OnlineCourse":
         # Extract name and description from the dictionary
         name: str = course_dict["name"]
         description: str = course_dict["description"]
