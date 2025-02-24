@@ -9,12 +9,10 @@ class OnlineCourse:
 
     @staticmethod
     def days_to_weeks(days: int) -> int:
-        """Converts days to weeks, rounding up if necessary."""
         return math.ceil(days / 7)
 
     @classmethod
     def from_dict(cls, course_dict: dict) -> "OnlineCourse":
-        """Creates an OnlineCourse instance from a dictionary."""
         weeks = cls.days_to_weeks(course_dict["days"])
         return cls(
             name=course_dict["name"],
