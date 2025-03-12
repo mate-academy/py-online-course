@@ -9,8 +9,7 @@ class OnlineCourse:
 
     @staticmethod
     def days_to_weeks(days: int) -> int:
-        weeks = days / 7
-        return math.ceil(weeks)
+        return math.ceil(days / 7)
 
     @classmethod
     def from_dict(cls, course_dict: dict) -> "OnlineCourse":
