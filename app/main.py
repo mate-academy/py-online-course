@@ -14,5 +14,5 @@ class OnlineCourse:
                    cls.days_to_weeks(course_dict["days"]))
 
     @staticmethod
-    def days_to_weeks(days: int) -> int:
+    def days_to_weeks(days: int) -> int:  # create method for convert
         return ceil(days / 7)
