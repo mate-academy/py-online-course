@@ -1,5 +1,5 @@
 from __future__ import annotations
-import numpy as np
+import math
 
 
 class OnlineCourse:
@@ -11,8 +11,8 @@ class OnlineCourse:
 
     @staticmethod
     def days_to_weeks(days: int) -> int:
-        week = np.ceil(days / 7)
-        return int(week)
+        week = math.ceil(days / 7)
+        return week
 
     @classmethod
     def from_dict(cls, course_dict: dict) -> OnlineCourse:
