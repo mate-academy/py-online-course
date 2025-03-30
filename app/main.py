@@ -16,7 +16,7 @@ class OnlineCourse:
         name = course_dict["name"]
         description = course_dict["description"]
         weeks = cls.days_to_weeks(course_dict["days"])
-        return cls(name=name, description=description, weeks=weeks)
+        return cls(name=name, description=description, weeks=weeks
 
 # course = OnlineCourse(
 #     name="Python Basics",
