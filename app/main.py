@@ -12,10 +12,13 @@ class OnlineCourse:
     def days_to_weeks(days: int) -> int:
         if days > 7:
             return abs(ceil(days / 7))
-        if days in (range(1,8)):
+        if days in (range(1, 8)):
             return 1
         return 0
 
     @classmethod
     def from_dict(cls: OnlineCourse, course_dict: dict) -> OnlineCourse:
-        return cls(course_dict["name"],course_dict["description"], cls.days_to_weeks(course_dict["days"]))
+        return cls(
+            course_dict["name"],
+            course_dict["description"],
+            cls.days_to_weeks(course_dict["days"]))
