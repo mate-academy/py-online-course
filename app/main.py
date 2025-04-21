@@ -1,16 +1,12 @@
 class OnlineCourse:
-    """
-    Клас для зберігання інформації про онлайн-курси.
-    """
-
     def __init__(self, name: str, description: str, weeks: int) -> None:
         """
-        Ініціалізує новий об'єкт OnlineCourse.
+        Initialize a new OnlineCourse object.
 
         Args:
-            name: Назва курсу
-            description: Опис курсу
-            weeks: Тривалість курсу в тижнях
+            name (str): The name of the course.
+            description (str): The description of the course.
+            weeks (int): The duration of the course in weeks.
         """
         self.name = name
         self.description = description
@@ -19,40 +15,39 @@ class OnlineCourse:
     @staticmethod
     def days_to_weeks(days: int) -> int:
         """
-        Перетворює кількість днів у кількість тижнів.
-        Останній тиждень може бути неповним.
+        Convert days to weeks. The last week may not be whole.
 
         Args:
-            days: Кількість днів
+            days (int): Number of days.
 
         Returns:
-            int: Кількість тижнів
+            int: Number of weeks.
         """
-        # Якщо день є останнім у тижні (7, 14, 21...), то не додаємо додатковий тиждень
+        # If the days divide evenly by 7, return that number of weeks
+        # Otherwise, add an extra week for the remaining days
         if days % 7 == 0:
             return days // 7
-        # Якщо є залишок днів, додаємо ще один тиждень
         else:
             return days // 7 + 1
 
     @classmethod
     def from_dict(cls, course_dict: dict) -> "OnlineCourse":
         """
-        Створює новий екземпляр OnlineCourse з словника.
+        Create a new OnlineCourse instance from a dictionary.
 
         Args:
-            course_dict: Словник з інформацією про курс
-                {'name': str, 'description': str, 'days': int}
+            course_dict (dict): Dictionary containing course information with
+                keys 'name', 'description', and 'days'.
 
         Returns:
-            OnlineCourse: Новий екземпляр класу OnlineCourse
+            OnlineCourse: A new instance of the OnlineCourse class.
         """
         name = course_dict["name"]
         description = course_dict["description"]
         days = course_dict["days"]
 
-        # Перетворюємо дні в тижні
+        # Convert days to weeks
         weeks = cls.days_to_weeks(days)
 
-        # Створюємо новий екземпляр класу
+        # Create and return a new OnlineCourse instance
         return cls(name=name, description=description, weeks=weeks)
