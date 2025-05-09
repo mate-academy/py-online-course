@@ -19,10 +19,11 @@ class OnlineCourse:
             if key not in course_dict:
                 raise ValueError(f">>> Missing key: '{key}' in course_dict")
             elif not isinstance(course_dict[key], expected_type):
-                raise TypeError(f">>> Expected {expected_type.__name__} in '{key}' key, "
-                                f"got {type(course_dict[key]).__name__} instead")
+                raise TypeError(f">>> Expected type "
+                                f"{expected_type.__name__} in '{key}' key, "
+                                f"but got {type(course_dict[key]).__name__}")
         return cls(
-                course_dict["name"],
-                course_dict["description"],
-                OnlineCourse.days_to_weeks(course_dict["days"])
-            )
+            course_dict["name"],
+            course_dict["description"],
+            OnlineCourse.days_to_weeks(course_dict["days"])
+        )
