@@ -1,0 +1,17 @@
+[33mc2bbc56[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmabranch[m[33m, [m[1;31morigin/mabranch[m[33m)[m done task
+[33m8ac761e[m[33m ([m[1;32mmaster[m[33m)[m Update README.md
+[33m030f160[m Update .flake8
+[33me47cd52[m Update requirements.txt
+[33m13167c9[m Update README.md
+[33mcfe36ed[m Merge pull request #65 from mate-academy/add-auto-approve-and-test
+[33m0dab127[m black formatting
+[33me29f98d[m add test and wuto-approve
+[33m71e65e3[m Update test.yml
+[33m66147e7[m Merge pull request #45 from mate-academy/add_timeout
+[33m547b689[m add timeout on tests
+[33m06d6864[m Merge pull request #14 from mate-academy/py_online_course_upd_flake
+[33m400190a[m add exclude venv and tests in .flake8
+[33m93ef43a[m Merge pull request #1 from mate-academy/add-online-course-task
+[33mff12f2d[m Update README.md
+[33maa4302a[m Create task
+[33mefd423e[m Initial commit
