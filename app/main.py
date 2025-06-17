@@ -10,6 +10,8 @@ class OnlineCourse:
     @staticmethod
     def days_to_weeks(days: str) -> int:
         return days // 7
+    def days_to_weeks(days):
+        return days // 7
 
     @classmethod
     def from_dict(cls, course_dict: dict) -> OnlineCourse:
