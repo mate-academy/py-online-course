@@ -8,14 +8,10 @@ class OnlineCourse:
         self.weeks = weeks
 
     @staticmethod
-    def days_to_weeks(days: int) -> int:
+    def days_to_weeks(days):
         return days // 7
 
     @classmethod
-    def from_dict(cls, course_dict: dict[str, str | int]) -> OnlineCourse:
-        weeks = cls.days_to_weeks(course_dict["days"])
-        return cls(
-            name=str(course_dict["name"]),
-            description=str(course_dict["description"]),
-            weeks=weeks
-        )
+    def from_dict(cls, course_dict: dict) -> OnlineCourse:
+        weekss = OnlineCourse.days_to_weeks(course_dict["days"])
+        return cls(course_dict["name"], course_dict["description"], weekss)
