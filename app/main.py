@@ -1,5 +1,4 @@
 from __future__ import annotations
-from typing import Self
 
 
 class OnlineCourse:
@@ -35,7 +34,7 @@ class OnlineCourse:
         return days // 7 + (1 if days % 7 != 0 else 0)
 
     @classmethod
-    def from_dict(cls, course_dict: dict) -> Self:
+    def from_dict(cls, course_dict: dict) -> OnlineCourse:
         return cls(
             course_dict.get("name", ""),
             course_dict.get("description", ""),
