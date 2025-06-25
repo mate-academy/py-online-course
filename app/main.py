@@ -1,7 +1,13 @@
+from __future__ import annotations
+
+
 class OnlineCourse:
-    def __init__(self, name: str,
+    def __init__(self,
+                 name: str,
                  description: str,
-                 weeks: int | float) -> None:
+                 weeks: int | float
+                 ) -> None:
+
         self.name = name
         self.description = description
         self.weeks = weeks
@@ -15,7 +21,12 @@ class OnlineCourse:
         return result if result == int(result) else int(result) + 1
 
     @classmethod
-    def from_dict(cls, course_dict: dict) -> "OnlineCourse":
-        return cls(course_dict["name"],
-                   course_dict["description"],
-                   cls.days_to_weeks(course_dict["days"]))
+    def from_dict(cls,
+                  course_dict: dict
+                  ) -> OnlineCourse:
+
+        return cls(
+            course_dict["name"],
+            course_dict["description"],
+            cls.days_to_weeks(course_dict["days"])
+        )
