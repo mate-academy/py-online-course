@@ -52,7 +52,7 @@ def test_constructor(name, description, weeks):
     ],
 )
 def test_days_to_weeks(days, weeks):
-    assert OnlineCourse.days_to_weeks(days) == weeks, (
+    assert OnlineCourse.days_to_weeks() == weeks, (
         f"Staticmethod 'days_to_weeks' should return {weeks} "
         f"when 'days' is equal to {days}"
     )
