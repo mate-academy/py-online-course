@@ -19,5 +19,3 @@ class OnlineCourse:
     @staticmethod
     def days_to_weeks(days: int) -> int:
         return math.ceil(days / 7)
-
-    pass
