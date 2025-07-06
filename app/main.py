@@ -1,5 +1,4 @@
 import math
-from typing import Self
 
 
 class OnlineCourse:
@@ -13,7 +12,7 @@ class OnlineCourse:
         return math.ceil(days / 7)
 
     @classmethod
-    def from_dict(cls, course_dict: dict) -> Self:
+    def from_dict(cls, course_dict: dict) -> "OnlineCourse":
         weeks = cls.days_to_weeks(course_dict.get("days"))
         description = course_dict.get("description")
         name = course_dict.get("name")
