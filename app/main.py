@@ -10,3 +10,5 @@ class OnlineCourse:
     @staticmethod
     def days_to_weeks(days: int) -> int:
         return ceil(days/7)
+
+    course_dict = {"name": None, "description": None, "days": None}
