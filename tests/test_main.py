@@ -5,6 +5,8 @@ from app.main import OnlineCourse
 
 class OnlineClass(OnlineCourse):
     pass
+
+
 @pytest.mark.parametrize(
     "name,description,weeks",
     [

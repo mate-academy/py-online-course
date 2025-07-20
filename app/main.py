@@ -3,6 +3,8 @@ import math
 
 
 class OnlineCourse:
+    # write your code here
+    pass
     def __init__(self, name: str, description: str, weeks: int) -> None:
         self.name = name
         self.description = description
