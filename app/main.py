@@ -5,6 +5,7 @@ import math
 class OnlineCourse:
     # write your code here
     pass
+
     def __init__(self, name: str, description: str, weeks: int) -> None:
         self.name = name
         self.description = description
@@ -19,7 +20,7 @@ class OnlineCourse:
         days = course_dict["days"]
         weeks = cls.days_to_weeks(days)
         return cls(
-            name = course_dict["name"],
-            description = course_dict["description"],
-            weeks = weeks
+            name=course_dict["name"],
+            description=course_dict["description"],
+            weeks=weeks
         )
