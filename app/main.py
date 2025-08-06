@@ -1,5 +1,8 @@
+from symtable import Class
+
+
 class OnlineCourse:
-    def __init__(self, name: str, description: str, weeks: int):
+    def __init__(self, name: str, description: str, weeks: int) -> None:
         self.name = name
         self.description = description
         self.weeks = weeks
@@ -12,7 +15,7 @@ class OnlineCourse:
         return weeks
 
     @classmethod
-    def from_dict(cls, course_dict: dict):
+    def from_dict(cls, course_dict: dict) -> OnlineCourse:
         days = course_dict.get("days")
         name = course_dict.get("name")
         description = course_dict.get("description")
