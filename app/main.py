@@ -1,4 +1,4 @@
-from symtable import Class
+from typing import Self
 
 
 class OnlineCourse:
@@ -15,7 +15,7 @@ class OnlineCourse:
         return weeks
 
     @classmethod
-    def from_dict(cls, course_dict: dict) -> OnlineCourse:
+    def from_dict(cls, course_dict: dict) -> Self:
         days = course_dict.get("days")
         name = course_dict.get("name")
         description = course_dict.get("description")
