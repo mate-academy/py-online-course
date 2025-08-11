@@ -1,16 +1,15 @@
 class OnlineCourse:
-    def __init__(self, name, description, weeks):
+    def __init__(self, name: str, description: str, weeks: int) -> None:
         self.name = name
         self.description = description
         self.weeks = weeks
 
     @staticmethod
-    def days_to_weeks(days):
-        # Ceiling division by 7: converts days to weeks, counting any remainder as a full week
+    def days_to_weeks(days: int) -> int:
         return (days + 6) // 7
 
     @classmethod
-    def from_dict(cls, course_dict):
+    def from_dict(cls, course_dict: dict[str, str | int]) -> "OnlineCourse":
         return cls(
             name=course_dict["name"],
             description=course_dict["description"],
