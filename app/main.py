@@ -6,7 +6,7 @@ class OnlineCourse:
 
     @staticmethod
     def days_to_weeks(days: int) -> int:
-        return int(-(-(days / 7) // 1))
+        return (days + 6) // 7
 
     @classmethod
     def from_dict(cls, course_dict: dict) -> "OnlineCourse":
