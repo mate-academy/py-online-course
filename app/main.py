@@ -1,7 +1,3 @@
-from __future__ import annotations
-import math
-from typing import Dict
-
 class OnlineCourse:
     def __init__(self, name: str, description: str, weeks: int) -> None:
         self.name = name
@@ -10,10 +6,11 @@ class OnlineCourse:
 
     @staticmethod
     def days_to_weeks(days: int) -> int:
-        return math.ceil(days / 7)
+        # Округлення вгору без math.ceil
+        return (days + 6) // 7
 
     @classmethod
-    def from_dict(cls, course_dict: Dict) -> OnlineCourse:
+    def from_dict(cls, course_dict) -> "OnlineCourse":
         name = course_dict["name"]
         description = course_dict["description"]
         weeks = cls.days_to_weeks(course_dict["days"])
