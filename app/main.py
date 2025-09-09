@@ -10,17 +10,15 @@ class OnlineCourse:
         self.description = description
         self.weeks = weeks
 
-
     @staticmethod
     def days_to_weeks(days: int) -> int:
         conversion = (days + 6) // 7
         return conversion
 
-
     @classmethod
-    def from_dict(cls, course_dict: dict) ->"OnlineCourse":
-        name = course_dict['name']
-        description = course_dict['description']
+    def from_dict(cls, course_dict: dict) -> "OnlineCourse":
+        name = course_dict["name"]
+        description = course_dict["description"]
         days = course_dict["days"]
 
         weeks = cls.days_to_weeks(days)
