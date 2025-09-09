@@ -1,6 +1,6 @@
 from __future__ import annotations
-from typing import Dict
 import math
+from typing import Dict
 
 class OnlineCourse:
     def __init__(self, name: str, description: str, weeks: int) -> None:
