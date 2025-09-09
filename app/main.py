@@ -1,5 +1,5 @@
-# main.py
-
+from __future__ import annotations
+from typing import Dict
 import math
 
 class OnlineCourse:
@@ -13,7 +13,7 @@ class OnlineCourse:
         return math.ceil(days / 7)
 
     @classmethod
-    def from_dict(cls, course_dict: dict) -> "OnlineCourse":
+    def from_dict(cls, course_dict: Dict) -> OnlineCourse:
         name = course_dict["name"]
         description = course_dict["description"]
         weeks = cls.days_to_weeks(course_dict["days"])
