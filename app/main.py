@@ -3,7 +3,7 @@ from math import ceil
 
 
 class OnlineCourse:
-    def __init__(self, name, description, duration) -> None:
+    def __init__(self, name: str, description: str, duration: int) -> None:
         self.name = name
         self.description = description
         self.duration = duration
