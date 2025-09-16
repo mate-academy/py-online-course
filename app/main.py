@@ -1,3 +1,21 @@
+from __future__ import annotations
+from math import ceil
+
+
 class OnlineCourse:
-    # write your code here
-    pass
+    def __init__(self, name, description, duration) -> None:
+        self.name = name
+        self.description = description
+        self.duration = duration
+
+    @staticmethod
+    def days_to_weeks(days: int) -> int:
+        return int(ceil(days / 7))
+
+    @classmethod
+    def form_dict(cls, course_dict: dict) -> OnlineCourse:
+        return OnlineCourse(
+            course_dict["name"],
+            course_dict["description"],
+            cls.days_to_weeks(course_dict["days"])
+        )
