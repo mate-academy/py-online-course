@@ -1,6 +1,5 @@
-import math
-from pydoc import describe
 from __future__ import annotations
+import math
 
 
 class OnlineCourse:
