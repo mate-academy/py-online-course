@@ -1,6 +1,5 @@
-from calendar import weekday
-from tkinter.font import names
-import  math
+from __future__ import annotations
+import math
 
 
 class OnlineCourse:
@@ -14,10 +13,10 @@ class OnlineCourse:
         return math.ceil(days / 7)
 
     @classmethod
-    def from_dict(cls, course_dict: dict[str, str | int]) -> "OnlineCourse":
+    def from_dict(cls, course_dict: dict[str, str | int]) -> OnlineCourse:
         weeks = cls.days_to_weeks(course_dict["days"])
         return cls(
-            name = course_dict["name"],
-            description = course_dict["description"],
-            weeks = weeks
+            name=course_dict["name"],
+            description=course_dict["description"],
+            weeks=weeks
         )
