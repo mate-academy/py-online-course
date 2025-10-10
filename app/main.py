@@ -13,10 +13,11 @@ class OnlineCourse:
         Converts days to weeks, rounding up the last week.
         Example: 14 days -> 2 weeks; 15 days -> 3 weeks.
         """
+        # Використовуємо math.ceil для округлення до більшого цілого числа
         return math.ceil(days / 7)
 
     @classmethod
-    def from_dict(cls, course_dict: dict) -> 'OnlineCourse':
+    def from_dict(cls, course_dict: dict) -> "OnlineCourse":
         """
         Creates an OnlineCourse instance from a dictionary.
         """
