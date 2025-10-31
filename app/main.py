@@ -9,14 +9,12 @@ class OnlineCourse:
 
     @staticmethod
     def days_to_weeks(days: int) -> int:
-        if days % 7 == 0:
-            return int(days / 7)
-        return int((days // 7) + 1)
+        return (days + 6) // 7
 
     @classmethod
-    def from_dict(cls, course_dict: dict[str, str | int]) -> OnlineCourse:
-        days = OnlineCourse.days_to_weeks(course_dict["days"])
-        new_course = cls(course_dict["name"],
-                         course_dict["description"],
-                         days)
+    def from_dict(cls, course_dict: dict) -> OnlineCourse:
+        weeks = cls.days_to_weeks(course_dict["days"])
+        new_course = cls(name=course_dict["name"],
+                         description=course_dict["description"],
+                         weeks=weeks)
         return new_course
