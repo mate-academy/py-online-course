@@ -133,7 +133,7 @@ def test_should_return_cls_instance(dictionary, name, description, weeks):
     online_class = OnlineClass.from_dict(dictionary)
 
     assert (
-        online_class.__class__.__name__ == "OnlineCourse"
+        online_class.__class__.__name__ == "OnlineClass"
     ), "Method 'from_dict' should return 'cls' instance"
     assert online_class.name == name, (
         f"Course should have 'name' equal to {name} "
