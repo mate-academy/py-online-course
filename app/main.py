@@ -14,11 +14,5 @@ class OnlineCourse:
         return cls(
             name=course_dict["name"],
             description=course_dict["description"],
-            weeks=weeks,
+            weeks=weeks
         )
-
-
-
-
-
-
