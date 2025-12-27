@@ -29,7 +29,7 @@ with such fields:
 To convert course duration to weeks, `OnlineCourse` should have `days_to_weeks` **staticmethod**, 
 that takes one argument `days` and convert this number to weeks.
 
-Note: The last week may not be whole.
+Note: The last week may not be fromwhole.
 
 Example:
 ```python
