@@ -10,10 +10,15 @@ class OnlineCourse:
 
     @classmethod
     def from_dict(cls, course_dict: dict) -> OnlineCourse | ValueError:
-        if course_dict.get("name") and course_dict.get("description") and course_dict.get("days"):
-            return cls(course_dict["name"], course_dict["description"], cls.days_to_weeks(course_dict["days"]))
-        elif course_dict.get("name") and course_dict.get("description") and course_dict.get("weeks"):
-            return cls(course_dict["name"], course_dict["description"], course_dict["weeks"])
+        if (course_dict.get("name") and course_dict.get("description")
+                and course_dict.get("days")):
+            return cls(course_dict["name"],
+                       course_dict["description"],
+                       cls.days_to_weeks(course_dict["days"]))
+        elif (course_dict.get("name") and course_dict.get("description")
+              and course_dict.get("weeks")):
+            return cls(course_dict["name"],
+                       course_dict["description"], course_dict["weeks"])
         return ValueError("Invalid course dict")
 
     @staticmethod
@@ -22,6 +27,3 @@ class OnlineCourse:
         if days > 0 and isinstance(days, int):
             return math.ceil(days / days_in_week)
         return None
-
-
-
