@@ -1,5 +1,13 @@
 from __future__ import annotations
 
+from typing import TypedDict
+
+
+class CourseDict(TypedDict):
+    name: str
+    description: str
+    days: int
+
 
 class OnlineCourse:
     def __init__(self, name: str, description: str, weeks: int) -> None:
@@ -12,7 +20,7 @@ class OnlineCourse:
         return (days + 6) // 7
 
     @classmethod
-    def from_dict(cls, course_dict: dict[str, object]) -> OnlineCourse:
+    def from_dict(cls, course_dict: CourseDict) -> OnlineCourse:
         weeks = cls.days_to_weeks(course_dict["days"])
         return cls(
             name=course_dict["name"],
