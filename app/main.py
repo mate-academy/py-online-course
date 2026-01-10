@@ -1,5 +1,6 @@
 from __future__ import annotations
-import math
+
+from typing import Any
 
 
 class OnlineCourse:
@@ -10,13 +11,11 @@ class OnlineCourse:
 
     @staticmethod
     def days_to_weeks(days: int) -> int:
-        weeks = math.ceil(days / 7)
-        return weeks
+        return (days - 1) // 7 + 1
 
     @classmethod
-    def from_dict(cls, course_dict: dict) -> OnlineCourse:
-        name = course_dict["name"]
-        description = course_dict["description"]
-        days = course_dict["days"]
-        weeks = cls.days_to_weeks(days)
-        return cls(name, description, weeks)
+    def from_dict(cls, course_dict: dict[str, Any]) -> OnlineCourse:
+        cls.name = course_dict["name"]
+        cls.description = course_dict["description"]
+        cls.weeks = cls.days_to_weeks(course_dict["days"])
+        return cls(name=cls.name, description=cls.description, weeks=cls.weeks)
