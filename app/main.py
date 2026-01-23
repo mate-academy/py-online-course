@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 class OnlineCourse:
     def __init__(self, name, description, weeks) -> None:
         self.name = name
@@ -9,7 +11,7 @@ class OnlineCourse:
         weeks += 1 if days % 7 > 0 else 0
         return weeks
     @classmethod
-    def from_dict(cls, course_dict: dict) -> OnlineCourse:
+    def from_dict(cls, course_dict: dict) -> "OnlineCourse":
         return cls(course_dict['name'],
                    course_dict['description'],
                    cls.days_to_weeks(course_dict['days'])
