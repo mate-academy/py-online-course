@@ -3,13 +3,11 @@ class OnlineCourse:
         self.name = name
         self.description = description
         self.weeks = weeks
-
     @staticmethod
     def days_to_weeks(days: int) -> int:
         weeks = days // 7
         weeks += 1 if days % 7 > 0 else 0
         return weeks
-
     @classmethod
     def from_dict(cls, course_dict: dict) -> OnlineCourse:
         return cls(course_dict['name'],
