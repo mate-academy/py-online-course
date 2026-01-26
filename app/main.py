@@ -9,8 +9,11 @@ class OnlineCourse:
 
     @classmethod
     def from_dict(cls, course_dict: dict) -> Self:
-    	return cls(course_dict["name"], course_dict["description"], 
-                            cls.days_to_weeks(course_dict["days"]))
+        name: str = course_dict.get("name", "")
+        description: str = course_dict.get("description", "")
+        days: int = course_dict.get("days", 0)
+        weeks: int = cls.days_to_weeks(days)
+        return cls(name, description, weeks)
 
     @staticmethod
     def days_to_weeks(days: int) -> int:
