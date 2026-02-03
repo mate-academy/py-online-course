@@ -1,5 +1,4 @@
 import math
-from os import name
 
 
 class OnlineCourse:
@@ -14,7 +13,7 @@ class OnlineCourse:
         return math.ceil(days / 7)
 
     @classmethod
-    def from_dict(cls, course_dict) -> {}:
+    def from_dict(cls, course_dict: dict[]) -> {}:
         days = course_dict.get("days")
         return cls(
             name=course_dict.get("name"),
