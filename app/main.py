@@ -1,8 +1,9 @@
 from __future__ import annotations
 
+
 class OnlineCourse:
 
-    def __init__ (
+    def __init__(
             self,
             name: str,
             description: str,
@@ -13,13 +14,13 @@ class OnlineCourse:
         self.weeks = weeks
 
     @staticmethod
-    def days_to_weeks (days: int) -> int:
-            return days // 7
+    def days_to_weeks(days: int) -> int:
+        return (days + 6) // 7
 
     @classmethod
     def from_dict(cls, data: dict) -> OnlineCourse:
         return cls(
             name=data["name"],
             description=data["description"],
-            weeks=cls.days_to_weeks(data["weeks"])
+            weeks=cls.days_to_weeks(data["days"])
         )
