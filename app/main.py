@@ -8,5 +8,5 @@ class OnlineCourse:
         self.weeks = weeks
 
     @staticmethod
-    def days_to_weeks(days: int) -> None:
+    def days_to_weeks(days: int) -> int:
         return math.ceil(days / 7)
