@@ -13,7 +13,6 @@ class OnlineCourse:
         weeks = days // 7
         if days % 7 != 0:
             weeks += 1
-
         return weeks
 
     @classmethod
