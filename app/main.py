@@ -8,7 +8,7 @@ class OnlineCourse:
         self.weeks = weeks
 
     @classmethod
-    def from_dict(cls, data: dict):
+    def from_dict(cls, data: dict) -> Self:
         weeks = math.ceil(data["days"] / 7)
         return cls(
             name=data["name"],
