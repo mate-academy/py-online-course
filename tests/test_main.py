@@ -133,21 +133,21 @@ def test_should_return_cls_instance(dictionary, name, description, weeks):
     online_class = OnlineClass.from_dict(dictionary)
 
     assert (
-        online_class.__class__.__name__ == "OnlineClass"
+        OnlineCourse.__class__.__name__ == "OnlineClass"
     ), "Method 'from_dict' should return 'cls' instance"
-    assert online_class.name == name, (
+    assert OnlineCourse.name == name, (
         f"Course should have 'name' equal to {name} "
         f"when course is created with "
         f"'OnlineCourse.from_dict({dictionary})'"
     )
 
-    assert online_class.description == description, (
+    assert OnlineCourse.description == description, (
         f"Course should have 'description' equal to {description} "
         f"when course is created with "
         f"'OnlineCourse.from_dict({dictionary})'"
     )
 
-    assert online_class.weeks == weeks, (
+    assert OnlineCourse.weeks == weeks, (
         f"Course should have 'weeks' equal to {weeks} "
         f"when course is created with "
         f"'OnlineCourse.from_dict({dictionary})'"
