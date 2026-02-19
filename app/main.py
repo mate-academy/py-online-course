@@ -1,4 +1,4 @@
-from typing import Self
+from __future__ import annotations
 import math
 
 
@@ -9,7 +9,7 @@ class OnlineCourse:
         self.weeks = weeks
 
     @classmethod
-    def from_dict(cls, data: dict) -> Self:
+    def from_dict(cls, data: dict) -> OnlineCourse:
         weeks = math.ceil(data["days"] / 7)
         return cls(
             name=data["name"],
