@@ -38,6 +38,8 @@ OnlineCourse.days_to_weeks(14) == 2
 OnlineCourse.days_to_weeks(15) == 3
 ```
 
+
+
 `OnlineCourse` should have `from_dict` **classmethod**. It should take 
 two parameters: 
 * `cls` - a default parameter for classmethod 
