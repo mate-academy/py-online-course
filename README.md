@@ -8,7 +8,7 @@ Could you implement it for us?
 
 `OnlineCourse` `__init__` method takes three arguments:
 * `name` - course name (should be stored in `self.name`)
-* `description` - course description (should be stored in `self.description`)
+  * `description` - course description (should be stored in `self.description`)
 * `weeks` - duration of the course in weeks (should be stored in `self.weeks`)
 
 ```python
