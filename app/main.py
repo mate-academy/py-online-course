@@ -1,3 +1,21 @@
+from __future__ import annotations
+import math
+
+
 class OnlineCourse:
-    # write your code here
-    pass
+
+    def __init__(self, name: str, description: str, weeks: int) -> None:
+        self.name = name
+        self.description = description
+        self.weeks = weeks
+
+    @staticmethod
+    def days_to_weeks(days: int) -> OnlineCourse:
+        return math.ceil(days / 7)
+
+    @classmethod
+    def from_dict(cls, course_dict: dict) -> OnlineCourse:
+        weeks = cls.days_to_weeks(course_dict.get("days"))
+        name = course_dict.get("name")
+        description = course_dict.get("description")
+        return cls(name, description, weeks)
