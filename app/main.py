@@ -2,21 +2,20 @@ import math
 
 
 class OnlineCourse:
-    def __init__(self, name, description, weeks):
+    def __init__(self, name: str, description: str, weeks: int) -> None:
         self.name = name
         self.description = description
         self.weeks = weeks
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"{self.name} - {self.description}"
 
     @staticmethod
-    def days_to_weeks(days):
+    def days_to_weeks(days: int) -> int:
         return math.ceil(days / 7)
 
-
     @classmethod
-    def from_dict(cls, course_dict):
+    def from_dict(cls, course_dict: dict[str, str | int]) -> "OnlineCourse":
         return cls(
             name=course_dict["name"],
             description=course_dict["description"],
