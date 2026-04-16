@@ -1,6 +1,7 @@
 from __future__ import annotations
 import math
 
+
 class OnlineCourse:
     # write your code here
     def __init__(self, name: str, description: str, weeks: int) -> None:
