@@ -9,7 +9,7 @@ class OnlineCourse:
 
     @staticmethod
     def days_to_weeks(days: int) -> int:
-        return days // 7
+        return (days + 6) // 7
 
     @classmethod
     def from_dict(cls, course_dict: dict[str, str | int]) -> OnlineCourse:
