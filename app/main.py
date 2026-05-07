@@ -14,6 +14,10 @@ class OnlineCourse:
 
     @classmethod
     def from_dict(cls, course_dict: dict) -> None:
-        course = cls(course_dict["name"], course_dict["description"], course_dict["days"])
+        course = cls(
+            course_dict["name"],
+            course_dict["description"],
+            course_dict["days"]
+        )
         course.weeks = course.days_to_weeks(course_dict["days"])
         return course
