@@ -9,12 +9,13 @@ class OnlineCourse:
         self.weeks = weeks
 
     @staticmethod
-    def days_to_weks(days: int) -> int:
+    def days_to_weeks(days: int) -> int:
         return math.ceil(days / 7)
 
     @classmethod
     def from_dict(cls, course_dict: Dict[str, Any]) -> "OnlineCourse":
         weeks = cls.days_to_weeks(course_dict["days"])
+
         return cls(
             name=course_dict["name"],
             description=course_dict["description"],
