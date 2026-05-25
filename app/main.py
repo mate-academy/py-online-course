@@ -1,4 +1,4 @@
-from math import ceil
+import math
 
 
 class OnlineCourse:
@@ -9,13 +9,13 @@ class OnlineCourse:
 
     @staticmethod
     def days_to_weeks(days: int) -> int:
-        weeks = ceil(days / 7)
+        weeks = math.ceil(days / 7)
         return weeks
 
     @classmethod
     def from_dict(cls, course_dict) -> object:
-        name = course_dict["name"]
-        descr = course_dict["description"]
-        days = course_dict["days"]
+        name = course_dict.get("name")
+        descr = course_dict.get("description")
+        days = course_dict.get("days")
         weeks = cls.days_to_weeks(days=days)
         return cls(name, descr, weeks)
