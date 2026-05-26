@@ -15,7 +15,7 @@ class OnlineCourse:
     @classmethod
     def from_dict(cls, course_dict: dict) -> "OnlineCourse":
         weeks = cls.days_to_weeks(course_dict["days"])
-        
+
         return cls(
             name=course_dict["name"],
             description=course_dict["description"],
