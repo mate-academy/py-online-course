@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+
 class OnlineCourse:
 
     def __init__(self, name: str, description: str, weeks: int):
@@ -11,6 +14,8 @@ class OnlineCourse:
 
     @classmethod
     def from_dict(cls, data: dict) -> OnlineCourse:
-        return cls(data["name"],
-                   data["description"],
-                   cls.days_to_weeks(data["days"]))
+        return cls(
+            data["name"],
+            data["description"],
+            cls.days_to_weeks(data["days"])
+        )
