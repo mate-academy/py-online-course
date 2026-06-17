@@ -6,7 +6,6 @@ class OnlineCourse:
 
     @staticmethod
     def days_to_weeks(days: int) -> int:
-        # 7 днів = 1 тиждень; неповний тиждень рахуємо як цілий (округлення вгору)
         return (days + 6) // 7
 
     @classmethod
