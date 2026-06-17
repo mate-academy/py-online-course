@@ -1,22 +1,18 @@
-import math
-
-
 class OnlineCourse:
-    def __init__(self, name, description, weeks):
+    def __init__(self, name: str, description: str, weeks: int) -> None:
         self.name = name
         self.description = description
         self.weeks = weeks
 
     @staticmethod
-    def days_to_weeks(days):
-        return math.ceil(days / 7)
+    def days_to_weeks(days: int) -> int:
+        # 7 днів = 1 тиждень; неповний тиждень рахуємо як цілий (округлення вгору)
+        return (days + 6) // 7
 
     @classmethod
-    def from_dict(cls, course_dict):
-        weeks = cls.days_to_weeks(course_dict["days"])
-
+    def from_dict(cls, course_dict: dict) -> "OnlineCourse":
         return cls(
-            course_dict["name"],
-            course_dict["description"],
-            weeks
+            name=course_dict["name"],
+            description=course_dict["description"],
+            weeks=cls.days_to_weeks(course_dict["days"]),
         )
