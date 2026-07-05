@@ -2,7 +2,7 @@ from __future__ import annotations
 from math import ceil
 
 
-class OnlineCourse:
+class OnlineClass:
     def __init__(self, name: str, description: str, weeks: int) -> None:
         self.name = name
         self.description = description
@@ -13,8 +13,10 @@ class OnlineCourse:
         return ceil(days / 7)
 
     @classmethod
-    def from_dict(cls, course_dict: dict) -> OnlineCourse:
-        return OnlineCourse(
+    def from_dict(cls, course_dict: dict) -> OnlineClass:
+        return OnlineClass(
             course_dict["name"],
             course_dict["description"],
             cls.days_to_weeks(course_dict["days"]))
+
+OnlineCourse = OnlineClass
