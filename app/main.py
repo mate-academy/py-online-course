@@ -6,12 +6,12 @@ class OnlineCourse:
 
     @staticmethod
     def days_to_weeks(days: int) -> int:
-        return (days + 1) // 7
+        return (days + 6) // 7
 
     @classmethod
     def from_dict(cls, data: dict) -> OnlineCourse:
         return cls(
-            data["name"],
-            data["description"],
-            data["weeks"],
+            name=data["name"],
+            description=data["description"],
+            weeks=cls.days_to_weeks(int(data["days"])),
         )
