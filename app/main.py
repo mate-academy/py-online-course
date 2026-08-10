@@ -1,4 +1,5 @@
 from __future__ import annotations
+import math
 
 
 class OnlineCourse:
@@ -14,7 +15,7 @@ class OnlineCourse:
 
     @staticmethod
     def days_to_weeks(days: int) -> int:
-        return days // 7
+        return math.ceil(days / 7)
 
     @classmethod
     def from_dict(
