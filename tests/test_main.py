@@ -94,7 +94,7 @@ def test_days_to_weeks(days, weeks):
     ],
 )
 def test_from_dict_method(dictionary, name, description, weeks):
-    course = OnlineCourse.from_dict(dictionary)
+    course = OnlineCourse.from_dict(dictionary, )
     assert course.name == name, (
         f"Course should have 'name' equal to {name} "
         f"when course is created with "
@@ -130,7 +130,7 @@ def test_from_dict_method(dictionary, name, description, weeks):
     ],
 )
 def test_should_return_cls_instance(dictionary, name, description, weeks):
-    online_class = OnlineClass.from_dict(dictionary)
+    online_class = OnlineClass.from_dict(dictionary, )
 
     assert (
         online_class.__class__.__name__ == "OnlineClass"
