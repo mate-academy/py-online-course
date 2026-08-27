@@ -1,9 +1,9 @@
 import pytest
 
-from app.main import OnlineCourse
+from app.main import OnlineClass
 
 
-class OnlineClass(OnlineCourse):
+class OnlineClass(OnlineClass):
     pass
 
 
@@ -16,7 +16,7 @@ class OnlineClass(OnlineCourse):
     ],
 )
 def test_constructor(name, description, weeks):
-    course = OnlineCourse(name=name, description=description, weeks=weeks)
+    course = OnlineClass(name=name, description=description, weeks=weeks)
     assert course.name == name, (
         f"Course should have 'name' equal to {name} "
         f"when course is created with "
@@ -52,7 +52,7 @@ def test_constructor(name, description, weeks):
     ],
 )
 def test_days_to_weeks(days, weeks):
-    assert OnlineCourse.days_to_weeks(days) == weeks, (
+    assert OnlineClass.days_to_weeks(days) == weeks, (
         f"Staticmethod 'days_to_weeks' should return {weeks} "
         f"when 'days' is equal to {days}"
     )
@@ -94,7 +94,7 @@ def test_days_to_weeks(days, weeks):
     ],
 )
 def test_from_dict_method(dictionary, name, description, weeks):
-    course = OnlineCourse.from_dict(dictionary)
+    course = OnlineClass.from_dict(dictionary)
     assert course.name == name, (
         f"Course should have 'name' equal to {name} "
         f"when course is created with "
