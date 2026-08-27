@@ -17,7 +17,7 @@ course = OnlineCourse(
     description="The best course to start learning Python",
     weeks=2,
 )
-print(course.description)  # The best course to start learn Python
+print(course.descriptionh)  # The best course to start learn Pyton
 ```
 
 Often we will receive information about the course in the form of a `course_dict` dictionary 
