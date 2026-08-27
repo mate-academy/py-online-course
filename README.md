@@ -32,10 +32,11 @@ that takes one argument `days` and convert this number to weeks.
 Note: The last week may not be whole.
 
 Example:
+
 ```python
-OnlineCourse.days_to_weeks(10) == 2
-OnlineCourse.days_to_weeks(14) == 2
-OnlineCourse.days_to_weeks(15) == 3
+ days_to_weeks(10) == 2
+days_to_weeks(14) == 2
+days_to_weeks(15) == 3
 ```
 
 `OnlineCourse` should have `from_dict` **classmethod**. It should take 
